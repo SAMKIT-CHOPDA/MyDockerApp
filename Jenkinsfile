@@ -6,12 +6,7 @@ pipeline {
         CONTAINER_NAME = "myapp_container"
     }
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/SAMKIT-CHOPDA/MyDockerApp.git'
-            }
-        }
+   
 
         stage('Build Application') {
             steps {
