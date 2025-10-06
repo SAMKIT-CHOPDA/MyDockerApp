@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/SAMKIT-CHOPDA/MyWebApp.git'
+                git branch: 'main', url: 'https://github.com/SAMKIT-CHOPDA/MyWebApp2.git'
             }
         }
         stage('Build') {
