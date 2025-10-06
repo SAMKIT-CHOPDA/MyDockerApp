@@ -17,7 +17,8 @@ pipeline {
            steps {
         echo 'Deploying WAR to Tomcat...'
         // Copy WAR file
-        bat 'copy target\\MyWebApp-1.0-SNAPSHOT.war %CATALINA_HOME%\\webapps\\MyWebApp.war'
+       bat 'copy target\\MyWebApp-1.0-SNAPSHOT.war C:\\Tomcat\\apache-tomcat-9.0.110\\webapps\\MyWebApp.war'
+
         // Stop Tomcat
         bat '%CATALINA_HOME%\\bin\\shutdown.bat'
         // Wait a few seconds to make sure Tomcat stops
