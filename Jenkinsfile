@@ -17,7 +17,8 @@ pipeline {
             steps {
                 echo 'Deploying WAR to Tomcat...'
                 // Copy WAR file to Tomcat webapps folder
-                bat 'copy target\\MyWebApp.war C:\\Tomcat\\apache-tomcat-9.0.110\\webapps\\'
+                bat 'copy target\\MyWebApp-1.0-SNAPSHOT.war C:\\Tomcat\\apache-tomcat-9.0.110\\webapps\\MyWebApp.war\\'
+\'
                 // Restart Tomcat
                 bat ' C:\\Tomcat\\apache-tomcat-9.0.110\\bin\\shutdown.bat'
                 bat ' C:\\Tomcat\\apache-tomcat-9.0.110\\bin \\startup.bat'
