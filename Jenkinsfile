@@ -6,8 +6,7 @@ pipeline {
         CONTAINER_NAME = "myapp_container"
     }
 
-   
-
+    stages {
         stage('Build Application') {
             steps {
                 echo 'Installing dependencies...'
@@ -42,4 +41,4 @@ pipeline {
             echo '❌ Build failed. Check Jenkins logs.'
         }
     }
-}
+} // <-- This closes the pipeline block
