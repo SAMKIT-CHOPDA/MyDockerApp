@@ -20,11 +20,11 @@ pipeline {
        bat 'copy target\\MyWebApp-1.0-SNAPSHOT.war C:\\Tomcat\\apache-tomcat-9.0.110\\webapps\\MyWebApp.war'
 
         // Stop Tomcat
-        bat '%CATALINA_HOME%\\bin\\shutdown.bat'
+        bat 'C:\\Tomcat\\apache-tomcat-9.0.110\\bin\\shutdown.bat'
         // Wait a few seconds to make sure Tomcat stops
         bat 'ping 127.0.0.1 -n 5 > nul'
         // Start Tomcat
-        bat '%CATALINA_HOME%\\bin\\startup.bat'
+        bat 'C:\\Tomcat\\apache-tomcat-9.0.110\\bin\\startup.bat'
     }
         }
     }
